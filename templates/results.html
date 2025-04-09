@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function showTable(tableId) {
+            document.getElementById("stocks-table").style.display = "none";
+            document.getElementById("sectors-table").style.display = "none";
+            
+            document.getElementById(tableId).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio Analysis Results</h1>
+
+        <div class="button-group">
+            <button onclick="showTable('stocks-table')">Decompose Stocks</button>
+            <button onclick="showTable('sectors-table')">Decompose Sectors</button>
+        </div>
+
+        <div id="stocks-table" class="table-container" style="display: none;">
+            <h2>Stock Allocations</h2>
+            {{ stocks | safe }}
+        </div>
+
+        <div id="sectors-table" class="table-container" style="display: none;">
+            <h2>Sector Allocations</h2>
+            {{ sectors | safe }}
+        </div>
+
+        <a href="/">Upload Another File</a>
+    </div>
+</body>
+</html>
