@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 # Paths for portfolio_analytics data
 
-DB_PATH = os.path.abspath("Portfolio-Analytics/portfolio_analytics/data/stocks.db")
-META_PATH = os.path.abspath("Portfolio-Analytics/portfolio_analytics/data/etf_metadata.json")
+DB_PATH = os.path.abspath("portfolio_analytics/data/stocks.db")
+META_PATH = os.path.abspath("portfolio_analytics/data/etf_metadata.json")
 
 # Initialize MarketData
 market_data = MarketData(db_name=DB_PATH, meta_file=META_PATH)
