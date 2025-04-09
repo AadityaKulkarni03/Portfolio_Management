@@ -20,6 +20,6 @@ setup(
     ],
     author="Arjun Deshpande",
     description="A Python package for portfolio analytics",
-    long_description=open("README.md").read(),
+    long_description="",
     url="https://github.com/deshpande-arjun/portfolio-analytics",
 )
